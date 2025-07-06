@@ -13,6 +13,9 @@ const Bookings = () => {
     const equipmentData = eq.find((eq: EquipmentProps) => eq.id == bookingId);
     return equipmentData?.name || "Attrezzatura non trovata";
   };
+  const orderedBookings = bookings.sort((a, b) => {
+    return new Date(b.start_date).getTime() - new Date(a.start_date).getTime();
+  });
   return (
     <div className="relative max-w-lg mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg mb-16">
       <Link to={"/"} className="absolute top-4 right-4 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 transition-all">
@@ -21,7 +24,7 @@ const Bookings = () => {
       <h2 className="text-2xl font-bold text-gray-800 mb-4">📌 Ultime Prenotazioni</h2>
       <div className="space-y-4">
         {/* mappa e visualizza le prenotazioni */}
-        {bookings.map((booking) => (
+        {orderedBookings.map((booking) => (
           <div key={booking.id} className="p-4 bg-gray-100 rounded-lg shadow flex justify-between items-center">
             <div>
               {/* mostra il nome dell'attrezzatura tramite la funzione per ottenere il nome basandosi sull'id dello strum */}

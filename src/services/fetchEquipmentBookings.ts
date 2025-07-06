@@ -1,5 +1,5 @@
 import type { BookingsProps } from "../models/bookings.model";
-import type { EquipmentProps } from "../models/equipment.model";
+
 import { BASE_URL } from "./fetchAll";
 
 export const fetchEquipmentBookings = async () => {
