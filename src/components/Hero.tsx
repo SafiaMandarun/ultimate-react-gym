@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export const Hero = () => {
   return (
     <div className="relative flex items-center justify-center h-screen text-center text-white">
@@ -21,9 +23,9 @@ export const Hero = () => {
         </p>
 
         {/* Pulsante di Call-To-Action per la registrazione */}
-        <a href="/prenotazioni" className={"mt-8 px-6 py-3 bg-indigo-700 hover:bg-indigo-900 text-white font-semibold text-lg rounded-lg shadow-lg transition"}>
+        <Link to="/prenotazioni" className={"mt-8 px-6 py-3 bg-indigo-700 hover:bg-indigo-900 text-white font-semibold text-lg rounded-lg shadow-lg transition"}>
           Visualizza prenotazioni
-        </a>
+        </Link>
         {/* Freccia animata per indicare lo scroll verso il basso */}
         <div className="mt-12 animate-bounce">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="w-8 h-8 mx-auto text-gray-300">
