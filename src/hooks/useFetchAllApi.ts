@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { EquipmentProps } from "../models/equipment.model";
-import { fetchAll } from "../services/FetchAll";
+import { fetchAll } from "../services/fetchAll";
 
 export const useFetchAll = () => {
   const [eq, setEq] = useState<EquipmentProps[]>([]);
