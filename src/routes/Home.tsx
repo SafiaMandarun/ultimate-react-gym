@@ -11,7 +11,7 @@ const Home = () => {
       <Hero></Hero>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mb-16 ">
         {eq.map((eq: EquipmentProps) => {
-          return <Card name={eq.name} claim={eq.claim} pricePerMinute={eq.pricePerMinute} image={eq.image}></Card>;
+          return <Card id={eq.id} name={eq.name} claim={eq.claim} pricePerMinute={eq.pricePerMinute} image={eq.image}></Card>;
         })}
       </div>
     </>
